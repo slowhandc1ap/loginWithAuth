@@ -1,6 +1,10 @@
 # 🔐 Fullstack Authentication System
 
 A modern, secure, and scalable fullstack authentication system built with **React**, **Express**, **MySQL**, and **Docker**. This project features **JWT-based authentication**, **role-based access control** (`user` and `admin`), and a responsive UI with **Tailwind CSS**. It supports token expiration, persistent user sessions via `localStorage`, and automated database initialization through Docker.
+## Important Notice
+
+This project is a **testing/demo** fullstack authentication system.  
+Currently, there is **no strict verification or validation for user registration**, especially for registering as an admin.  
 
 ---
 
@@ -32,6 +36,7 @@ A modern, secure, and scalable fullstack authentication system built with **Reac
 ```
 project-root/
 ├── backend/
+|   ├── docker-compose.yml      # Docker Compose configuration
 │   ├── app.js              # Express server entry point
 │   ├── routes/             # API route definitions
 │   ├── controllers/        # Business logic for routes
@@ -47,7 +52,6 @@ project-root/
 │   │   │   └── Dashboard.jsx
 │   │   └── App.jsx         # Main React app component
 │   └── vite.config.js      # Vite configuration
-├── docker-compose.yml      # Docker Compose configuration
 └── README.md               # Project documentation
 ```
 
@@ -66,7 +70,7 @@ DB_PASSWORD=your-secure-password
 DB_NAME=auth_db
 ```
 
-> **Note**: Replace `your-very-secure-secret-key` and `your-secure-password` with strong, secure values in production.
+> **Note**: Replace `your-very-secure-secret-key` and `your-secure-password` with strong, secure values in production. but now for testing
 
 ---
 
@@ -148,15 +152,19 @@ DB_NAME=auth_db
 
 ## 📸 Screenshots
 
-Example paths for UI screenshots (to be added):
-- `screenshots/login.png`
-- `screenshots/dashboard.png`
+
+![Screenshot 2025-06-20 105805](https://github.com/user-attachments/assets/40378ba6-7e35-4ce8-8aca-e583c6b18c85)
+![Screenshot 2025-06-20 105820](https://github.com/user-attachments/assets/5b8a48c9-b835-41e5-8b37-cf952ac2816c)
+![Screenshot 2025-06-20 105906](https://github.com/user-attachments/assets/a2a9b29d-56ab-41c9-9ece-4f8a1e6f50df)
+![Screenshot 2025-06-20 110048](https://github.com/user-attachments/assets/e78618b4-1de1-4028-aad3-d5c550f5d051)
+
+
 
 ---
 
 ## 📝 Notes
 
-- **Token Expiration**: For testing, tokens expire after **10 seconds**. Adjust the expiration time in production via the backend configuration.
+- **Token Expiration**: For testing, tokens expire after **3 minute**. Adjust the expiration time in production via the backend configuration.
 - **Database Initialization**: The `init.sql` file runs automatically when the MySQL container is first created.
 - **Deployment**: This project is not yet deployed. For production, consider securing the `.env` file, enabling HTTPS, and using a reverse proxy like Nginx.
 - **Docker**: Ensure port `3307` (MySQL) and `3000` (backend) are free before starting Docker Compose.
@@ -172,14 +180,10 @@ Example paths for UI screenshots (to be added):
 
 ---
 
-## 📚 Future Improvements
+## 📚 Flow Diagram , Sequence Diagram
 
-- Add refresh token support for extended user sessions.
-- Implement password reset functionality via email.
-- Deploy the application to a cloud provider (e.g., AWS, Vercel).
-- Add unit and integration tests for backend and frontend.
-
----
+![Editor _ Mermaid Chart-2025-06-20-034103](https://github.com/user-attachments/assets/55a2d8cd-7830-4b55-8b30-a7b66456a78e)
+![Editor _ Mermaid Chart-2025-06-20-034350](https://github.com/user-attachments/assets/7019c8e3-9e13-4390-9c87-919d47247623)
 
 ## 🤝 Contributing
 
@@ -189,8 +193,8 @@ Contributions are welcome! Please fork the repository, create a feature branch, 
 
 ## 📧 Contact
 
-For questions or feedback, reach out via [GitHub Issues](https://github.com/your-repo/issues).
+For questions or feedback, reach out via [GitHub Issues](https://github.com/loginWithAuth/issues).
 
 ---
 
-**Built with 💻 and ☕ by [Your Name]**
+**Built with 💻 and ☕ by Tanakorn Taveethavorn]**
