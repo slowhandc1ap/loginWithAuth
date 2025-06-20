@@ -193,7 +193,7 @@ Contributions are welcome! Please fork the repository, create a feature branch, 
 
 ## 📧 Contact
 
-For questions or feedback, reach out via [GitHub Issues](https://github.com/loginWithAuth/issues).
+For questions or feedback, reach out via [GitHub Issues](https://github.com/slowhandc1ap/loginWithAuth/issues).
 
 ---
 
